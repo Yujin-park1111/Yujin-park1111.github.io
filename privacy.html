@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보처리방침 — 동물창고 / Animal Stash</title>
+<style>
+  :root { --fg:#1a1a1a; --muted:#5c5c5c; --line:#e3e3e3; --bg:#fff; --accent:#2b6cb0; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#e8e8e8; --muted:#a0a0a0; --line:#333; --bg:#151515; --accent:#7aa7d9; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin:0; padding:0 16px; background:var(--bg); color:var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+    line-height:1.75; font-size:16px;
+  }
+  main { max-width:720px; margin:0 auto; padding:56px 0 80px; }
+  h1 { font-size:1.8rem; margin:0 0 6px; letter-spacing:-0.02em; }
+  h2 { font-size:1.1rem; margin:36px 0 10px; letter-spacing:-0.01em; }
+  p { margin:0 0 16px; }
+  .updated { color:var(--muted); font-size:0.92rem; margin-bottom:36px; }
+  .en { color:var(--muted); font-size:0.94rem; }
+  a { color:var(--accent); }
+  code { font-size:0.9em; background:rgba(128,128,128,0.14); padding:2px 5px; border-radius:3px; }
+  footer { border-top:1px solid var(--line); margin-top:56px; padding-top:20px;
+           font-size:0.9rem; color:var(--muted); }
+  footer a { margin-right:16px; }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>개인정보처리방침</h1>
+  <p class="updated">최종 수정일: 2026년 9월 20일 · Last updated: September 20, 2026</p>
+
+  <p>
+    이 방침은 <strong>youtube-shorts-automation</strong>(이하 "이 앱")이 구글 사용자 데이터를 어떻게 다루는지 설명합니다.
+    이 앱은 운영자 본인의 유튜브 채널에 영상을 올리기 위한 개인용 도구이며, 다른 사용자를 받지 않습니다.
+  </p>
+  <p class="en">
+    This policy explains how <strong>youtube-shorts-automation</strong> ("the app") handles Google user data.
+    The app is a personal tool used only by its operator to upload videos to the operator's own YouTube channels.
+    It has no other users.
+  </p>
+
+  <h2>수집하는 정보</h2>
+  <p>
+    이 앱은 방문자나 제3자로부터 어떤 개인정보도 수집하지 않습니다. 회원가입, 로그인, 문의 양식, 분석 도구, 광고,
+    쿠키를 사용하지 않습니다.
+  </p>
+  <p>
+    구글 계정과 관련해서는, 운영자가 직접 인증 절차를 거쳐 발급한 <strong>OAuth 리프레시 토큰</strong> 한 개만을 보관합니다.
+    이 토큰은 운영자 본인 계정의 것이며, 영상 업로드 권한(<code>youtube.upload</code>)만을 가집니다.
+  </p>
+  <p class="en">
+    The app collects no personal information from visitors or third parties. It has no sign-up, no login,
+    no contact form, no analytics, no advertising, and no cookies. With respect to Google accounts, the app
+    stores a single <strong>OAuth refresh token</strong> that the operator generated for the operator's own account,
+    carrying only the <code>youtube.upload</code> permission.
+  </p>
+
+  <h2>정보를 사용하는 방법</h2>
+  <p>
+    리프레시 토큰은 오직 하나의 목적으로 사용됩니다 — 운영자 본인의 유튜브 채널에 영상 파일을 업로드하는 것입니다.
+    이 앱은 시청 기록, 구독 목록, 댓글, 수익 정보 등 다른 어떤 구글 데이터도 읽거나 수정하지 않습니다.
+  </p>
+  <p class="en">
+    The refresh token is used for exactly one purpose: uploading video files to the operator's own YouTube channels.
+    The app does not read or modify watch history, subscriptions, comments, revenue data, or any other Google data.
+  </p>
+
+  <h2>정보를 보관하는 방법</h2>
+  <p>
+    리프레시 토큰은 GitHub Actions의 암호화된 시크릿(encrypted secret)으로 저장됩니다.
+    저장소 코드에는 토큰이 포함되지 않으며, 실행 로그에도 출력되지 않습니다.
+    이 앱은 별도의 데이터베이스나 서버를 운영하지 않습니다.
+  </p>
+  <p class="en">
+    The refresh token is stored as an encrypted GitHub Actions secret. It is never committed to the repository
+    and never printed to run logs. The app operates no database and no server of its own.
+  </p>
+
+  <h2>정보를 공유하지 않습니다</h2>
+  <p>
+    이 앱은 구글 사용자 데이터를 누구와도 공유, 판매, 양도하지 않습니다. 데이터가 전송되는 곳은
+    구글의 유튜브 데이터 API 한 곳뿐이며, 그 목적은 위에 적은 영상 업로드입니다.
+  </p>
+  <p>
+    이 앱이 구글 API로부터 받은 정보의 사용 및 다른 앱으로의 전송은
+    <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API 서비스 사용자 데이터 정책</a>의
+    제한적 사용(Limited Use) 요건을 포함한 모든 조항을 준수합니다.
+  </p>
+  <p class="en">
+    The app does not share, sell, or transfer Google user data to anyone. The only destination data is sent to is
+    Google's YouTube Data API, for the upload purpose described above. The app's use and transfer of information
+    received from Google APIs adheres to the
+    <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>,
+    including the Limited Use requirements.
+  </p>
+
+  <h2>보관 기간과 삭제</h2>
+  <p>
+    토큰은 운영자가 삭제하거나 구글 계정 설정에서 권한을 철회할 때까지 보관됩니다.
+    운영자는 <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">구글 계정 권한 페이지</a>에서
+    언제든지 이 앱의 접근 권한을 철회할 수 있으며, 철회 즉시 업로드 기능이 중단됩니다.
+  </p>
+  <p class="en">
+    The token is retained until the operator deletes it or revokes access from Google account settings.
+    Access can be revoked at any time at
+    <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google Account permissions</a>,
+    which immediately stops the app from uploading.
+  </p>
+
+  <h2>영상 소재의 출처</h2>
+  <p>
+    업로드되는 영상은 <a href="https://www.pexels.com" target="_blank" rel="noopener">Pexels</a>에서 제공하는
+    무료 스톡 영상을 편집하여 제작합니다. 각 영상의 설명란에 촬영자 이름과 Pexels 출처를 표기합니다.
+  </p>
+
+  <h2>방침 변경</h2>
+  <p>
+    이 방침이 변경되면 이 페이지의 최종 수정일을 갱신합니다.
+  </p>
+
+  <h2>연락처</h2>
+  <p>
+    문의: <a href="mailto:remnant123497@gmail.com">remnant123497@gmail.com</a>
+  </p>
+
+  <footer>
+    <a href="./index.html">홈</a>
+    <a href="./terms.html">서비스 약관</a>
+  </footer>
+
+</main>
+</body>
+</html>
